@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome'],
   css: [
     '~/assets/scss/app.scss',
-    '~/assets/scss/config/_theme-config.scss'
+    '~/assets/scss/config/_theme-config.scss',
+    '~/assets/css/app.min.css',
+    '~/assets/css/icons.min.css',
+    '~/assets/js/config.js'
   ]
 })

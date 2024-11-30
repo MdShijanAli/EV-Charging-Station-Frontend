@@ -4,9 +4,9 @@
     <button data-fc-type="dropdown" data-fc-placement="bottom-end" type="button" class="nav-link p-2 fc-dropdown">
         <span class="flex items-center gap-2">
             <img src="/assets/images/flags/us.jpg" alt="flag-image" class="h-3">
-            <div class="lg:flex items-center gap-1 hidden">
+            <div class="lg:block hidden">
                 <span>English</span>
-                <IconsArrowDownIcon />
+                <i class="ri-arrow-down-s-line"></i>
             </div>
         </span>
     </button>
