@@ -1,6 +1,6 @@
 <template>
   <div class="app-menu">
-    <a href="index.html" class="logo-box">
+    <NuxtLink to="/dashboard" class="logo-box">
     <!-- Light Logo -->
     <div class="logo-light">
         <img src="/assets/images/logo.png" class="logo-lg h-[22px]" alt="Light logo">
@@ -12,7 +12,7 @@
         <img src="/assets/images/logo-dark.png" class="logo-lg h-[22px]" alt="Dark logo">
         <img src="/assets/images/logo-sm.png" class="logo-sm h-[22px]" alt="Small logo">
     </div>
-</a>
+</NuxtLink>
 
 <!-- Sidenav Menu Toggle Button -->
 <button id="button-hover-toggle" class="absolute top-5 end-2 rounded-full p-1.5 z-50">

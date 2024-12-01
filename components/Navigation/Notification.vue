@@ -58,7 +58,7 @@
                 <div class="py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <img src="assets/images/users/avatar-2.jpg" class="rounded-full h-9 w-9" alt="">
+                            <img src="/assets/images/users/avatar-2.jpg" class="rounded-full h-9 w-9" alt="">
                         </div>
                         <div class="flex-grow truncate ms-2">
                             <h5 class="text-sm font-semibold mb-1">Cristina Pride <small class="font-normal ms-1">1 day ago</small></h5>
@@ -90,7 +90,7 @@
                 <div class="py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <img src="assets/images/users/avatar-4.jpg" class="rounded-full h-9 w-9" alt="">
+                            <img src="/assets/images/users/avatar-4.jpg" class="rounded-full h-9 w-9" alt="">
                         </div>
                         <div class="flex-grow truncate ms-2">
                             <h5 class="text-sm font-semibold mb-1">Karen Robinson</h5>

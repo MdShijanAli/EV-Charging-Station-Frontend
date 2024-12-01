@@ -22,6 +22,8 @@
       };
   
       const html = document.getElementsByTagName("html")[0];
+
+      let config;
   
       config = Object.assign(JSON.parse(JSON.stringify(defaultConfig)), {});
   

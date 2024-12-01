@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@vesp/nuxt-fontawesome": "^1.1.0",
+    "apexcharts": "^4.1.0",
+    "chart.js": "^4.4.7",
     "nuxt": "^3.14.1592",
+    "swiper": "^11.1.15",
     "vue": "latest",
     "vue-router": "latest"
   },

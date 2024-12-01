@@ -1,10 +1,11 @@
 <template>
   <div>
-    <!-- <h1 class="">Welcome to my NUXT Project</h1> -->
+     <Dashboard />
   </div>
 </template>
 
 <script setup>
+import Dashboard from '~/views/dashboard/Dashboard';
 
 definePageMeta({
   layout: 'dashboard'

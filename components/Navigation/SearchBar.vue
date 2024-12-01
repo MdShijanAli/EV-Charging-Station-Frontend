@@ -34,7 +34,7 @@
 
     <!-- item-->
     <a href="javascript:void(0);" class="flex items-center py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-        <img class="me-2 rounded-full h-8" src="assets/images/users/avatar-2.jpg" alt="Generic placeholder image">
+        <img class="me-2 rounded-full h-8" src="/assets/images/users/avatar-2.jpg" alt="Generic placeholder image">
         <div class="flex-grow">
             <h5 class="m-0 fs-14">Erwin Brown</h5>
             <span class="fs-12 ">UI Designer</span>
@@ -43,7 +43,7 @@
 
     <!-- item-->
     <a href="javascript:void(0);" class="flex items-center py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-        <img class="me-2 rounded-full h-8" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image">
+        <img class="me-2 rounded-full h-8" src="/assets/images/users/avatar-5.jpg" alt="Generic placeholder image">
         <div class="flex-grow">
             <h5 class="m-0 fs-14">Jacob Deo</h5>
             <span class="fs-12 ">Developer</span>
