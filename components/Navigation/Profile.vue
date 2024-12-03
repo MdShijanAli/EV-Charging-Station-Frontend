@@ -1,10 +1,10 @@
 <template>
   <div class="relative">
     <button data-fc-type="dropdown" data-fc-placement="bottom-end" type="button" class="nav-link flex items-center gap-2.5 px-3 bg-black/5 border-x border-black/10">
-        <img src="/assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-full h-8">
+        <img src="/assets/images/users/shijan.png" alt="user-image" class="rounded-full w-8 h-8 object-cover">
         <span class="md:flex flex-col gap-0.5 text-start hidden">
-            <h5 class="text-sm">Tosha Minner</h5>
-            <span class="text-xs">Founder</span>
+            <h5 class="text-sm">Md Shijan Ali</h5>
+            <span class="text-xs">CEO</span>
         </span>
     </button>
 
