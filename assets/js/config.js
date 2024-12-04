@@ -1,6 +1,7 @@
 (function () {
     if (process.client) { // Ensures this block runs only on the client-side
       var savedConfig = sessionStorage.getItem("__ATTEX_CONFIG__");
+      // var savedConfig = {"direction":"ltr","theme":"light","layout":{"width":"default","position":"fixed"},"topbar":{"color":"light"},"menu":{"color":"dark"},"sidenav":{"view":"default"}};
       // var savedConfig = localStorage.getItem("__ATTEX_CONFIG__");
   
       var defaultConfig = {

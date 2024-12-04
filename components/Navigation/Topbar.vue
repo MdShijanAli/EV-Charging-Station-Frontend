@@ -1,5 +1,7 @@
-<script setup lang="ts">
+<script setup>
 import Language from './Language.vue';
+
+const emit = defineEmits(["toggle-sidebar"]);
 
 </script>
 
@@ -8,7 +10,7 @@ import Language from './Language.vue';
 <header class="app-header flex items-center px-4 gap-3.5">
 
 <!-- Sidenav Menu Toggle Button -->
-<button id="button-toggle-menu" class="nav-link p-2">
+<button @click="$emit('toggle-sidebar')" id="button-toggle-menu" class="nav-link p-2">
     <span class="sr-only">Menu Toggle Button</span>
     <span class="flex items-center justify-center">
         <i class="ri-menu-2-fill text-2xl"></i>

@@ -1,5 +1,10 @@
 <script setup>
 import Sidebar from "~/components/Sidebar/Sidebar.vue";
+
+const isSidebarOpen = ref(true); // Sidebar state
+const toggleSidebar = () => {
+  isSidebarOpen.value = !isSidebarOpen.value; // Toggle open/close state
+};
 </script>
 
 <template>
@@ -13,9 +18,9 @@ import Sidebar from "~/components/Sidebar/Sidebar.vue";
             :throttle="1"
             color="#ff0000"
           />
-          <Sidebar class="dashboard-sidebar" />
+          <Sidebar :isOpen="isSidebarOpen" class="dashboard-sidebar" />
           <div class="dashboard-main">
-            <NavigationNavbar />
+            <NavigationNavbar @toggle-sidebar="toggleSidebar" />
             <!-- Dynamic content for each page -->
             <main class="dashboard-content">
               <slot />
@@ -33,7 +38,6 @@ import Sidebar from "~/components/Sidebar/Sidebar.vue";
 </template>
 
 <style scoped>
-/* Dashboard layout styles */
 .dashboard-layout {
   display: flex;
   height: 100vh;
@@ -41,9 +45,12 @@ import Sidebar from "~/components/Sidebar/Sidebar.vue";
 }
 
 .dashboard-sidebar {
-  width: 250px; /* Adjust width as per design */
-  background-color: #f8f9fa; /* Light gray background */
+  width: 250px; /* Default sidebar width */
+  transition: width 0.3s; /* Smooth transition */
   overflow-y: auto;
+}
+.dashboard-sidebar.collapsed {
+  width: 80px; /* Collapsed width */
 }
 
 .dashboard-main {
@@ -54,7 +61,6 @@ import Sidebar from "~/components/Sidebar/Sidebar.vue";
 
 .dashboard-content {
   flex: 1;
-  padding: 20px; /* Adjust padding as needed */
   overflow-y: auto;
 }
 </style>

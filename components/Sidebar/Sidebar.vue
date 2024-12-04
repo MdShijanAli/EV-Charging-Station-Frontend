@@ -1,5 +1,5 @@
 <template>
-  <div class="app-menu">
+  <div class="app-menu" :class="{ collapsed: !isOpen }">
     <NuxtLink to="/dashboard" class="logo-box">
     <!-- Light Logo -->
     <div class="logo-light">
@@ -764,3 +764,13 @@
 </div>
 </div>
 </template>
+
+
+<script setup>
+const props = defineProps({
+  isOpen: {
+    type: Boolean,
+    required: true,
+  },
+});
+</script>
