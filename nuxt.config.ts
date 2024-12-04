@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '~/assets/scss/config/_theme-config.scss',
     '~/assets/css/app.min.css',
     '~/assets/css/icons.min.css',
-    '~/assets/js/config.js'
+    '~/assets/js/config.js',
+    'simplebar/dist/simplebar.min.css',
   ]
 })

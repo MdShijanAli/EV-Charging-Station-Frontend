@@ -47,7 +47,6 @@ const toggleSidebar = () => {
 .dashboard-sidebar {
   width: 250px; /* Default sidebar width */
   transition: width 0.3s; /* Smooth transition */
-  overflow-y: auto;
 }
 .dashboard-sidebar.collapsed {
   width: 80px; /* Collapsed width */
