@@ -1,14 +1,18 @@
 <template>
-  <div class="relative lg:flex hidden">
-    <button data-fc-type="dropdown" data-fc-placement="bottom-end" type="button" class="nav-link p-2">
-        <span class="sr-only">View notifications</span>
-        <span class="flex items-center justify-center">
-            <i class="ri-notification-3-line text-2xl"></i>
-            <span class="absolute top-5 end-2.5 w-2 h-2 rounded-full bg-danger"></span>
-        </span>
-    </button>
-    <div class="fc-dropdown fc-dropdown-open:opacity-100 hidden opacity-0 w-80 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 rounded-lg">
-
+    <div class="relative" ref="dropdownContainer">
+      <button 
+        @click="toggleDropdown"
+        type="button" class="nav-link p-2">
+          <span class="sr-only">View notifications</span>
+          <span class="flex items-center justify-center">
+              <i class="ri-notification-3-line text-2xl"></i>
+              <span class="absolute top-5 end-2.5 w-2 h-2 rounded-full bg-danger"></span>
+          </span>
+      </button>
+      <div 
+        v-if="dropdownOpen"
+        class="absolute right-0 mt-2 w-80 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 rounded-lg">
+          
         <div class="p-3 border-b border-gray-200 dark:border-gray-700">
             <div class="flex items-center justify-between">
                 <h6 class="text-sm text-gray-500 dark:text-gray-200"> Notification</h6>
@@ -104,6 +108,35 @@
         <a href="javascript:void(0);" class="p-2 border-t border-gray-200 dark:border-gray-700 block text-center text-primary underline font-semibold">
             View All
         </a>
+
+      </div>
     </div>
-</div>
-</template>
+  </template>
+  
+  <script setup>
+  import { onMounted, onUnmounted, ref } from 'vue';
+  
+  const dropdownOpen = ref(false) // Control dropdown visibility
+  
+  const toggleDropdown = () => {
+    dropdownOpen.value = !dropdownOpen.value
+  }
+  
+  const closeDropdown = (event) => {
+    // Close only if the click is outside the dropdown container
+    if (!dropdownContainer.value.contains(event.target)) {
+      dropdownOpen.value = false
+    }
+  }
+  
+  const dropdownContainer = ref(null) // Reference to the dropdown container
+  
+  onMounted(() => {
+    document.addEventListener('click', closeDropdown)
+  })
+  
+  onUnmounted(() => {
+    document.removeEventListener('click', closeDropdown)
+  })
+  </script>
+  
