@@ -1,5 +1,5 @@
 <template>
-  <div class="app-menu" :class="{ collapsed: !isOpen }">
+  <div class="app-menu" >
     <NuxtLink to="/dashboard" class="logo-box">
     <!-- Light Logo -->
     <div class="logo-light">
