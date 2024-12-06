@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       { src: '/assets/js/config.js', type: 'text/javascript', defer: true }
     ]
   },
-  modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome'],
+  modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome', '@pinia/nuxt', ],
   css: [
     '~/assets/scss/app.scss',
     '~/assets/scss/config/_theme-config.scss',

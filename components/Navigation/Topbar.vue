@@ -25,10 +25,6 @@ const emit = defineEmits(["toggle-sidebar"]);
 <!-- Notification Bell Button -->
 <NavigationNotification />
 
-
-<!-- Theme Setting Button -->
-<NavigationThemeSwitching />
-
 <!-- Light/Dark Toggle Button -->
 <NavigationDarkMode />
 
