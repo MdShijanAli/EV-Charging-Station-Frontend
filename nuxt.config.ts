@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   css: [
     '~/assets/scss/app.scss',
     '~/assets/scss/config/_theme-config.scss',
+    '~/assets/scss/structure/_sidenav.scss',
     '~/assets/css/app.min.css',
     '~/assets/css/icons.min.css',
     '~/assets/js/config.js',

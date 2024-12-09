@@ -1,10 +1,9 @@
 <script setup>
 import Sidebar from "~/components/Sidebar/Sidebar.vue";
+import { useSidebarPanelsStore } from "~/stores/sidebarPanels";
 
-const isSidebarOpen = ref(true); // Sidebar state
-const toggleSidebar = () => {
-  isSidebarOpen.value = !isSidebarOpen.value; // Toggle open/close state
-};
+// Access the sidebar state and toggle function from the Pinia store
+const sidebarPanelsStore = useSidebarPanelsStore();
 </script>
 
 <template>
@@ -18,9 +17,9 @@ const toggleSidebar = () => {
             :throttle="1"
             color="#ff0000"
           />
-          <Sidebar :isOpen="isSidebarOpen" class="dashboard-sidebar" />
+          <Sidebar />
           <div class="dashboard-main">
-            <NavigationNavbar @toggle-sidebar="toggleSidebar" />
+            <NavigationNavbar />
             <!-- Dynamic content for each page -->
             <main class="dashboard-content">
               <slot />
@@ -42,14 +41,6 @@ const toggleSidebar = () => {
   display: flex;
   height: 100vh;
   overflow: hidden;
-}
-
-.dashboard-sidebar {
-  width: 250px; /* Default sidebar width */
-  transition: width 0.3s; /* Smooth transition */
-}
-.dashboard-sidebar.collapsed {
-  width: 80px; /* Collapsed width */
 }
 
 .dashboard-main {

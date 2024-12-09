@@ -1,3 +1,5 @@
+// assets/scss/_theme-config.scss
+
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
 
 // ======= Real-Time Customization :root Variables ======= //
@@ -12,6 +14,7 @@
     }
 }
 
+// ======= Layout Settings: Sidebars, Topbars, Menu ======= //
 :root {
     --tw-sidenav-width: 240px;
     --tw-sidenav-width-md: 160px;
@@ -66,6 +69,7 @@ html[data-menu-color="brand"] {
 }
 
 // ======= Topbar Styling ======= //
+
 // Light
 html[data-topbar-color="light"] {
     --tw-topbar-bg: white;
