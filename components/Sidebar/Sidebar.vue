@@ -121,14 +121,14 @@ const leave = (el, done) => {
 };
 </script>
 
-
-
 <style scoped>
 .app-menu {
-  width: 200px;
+  width: 200px; 
   opacity: 1;
   transition: width 0.1s ease-in-out, opacity 0.1s ease-in-out;
   overflow: hidden;
+  position: relative; 
+  z-index: 1;
 }
 
 .app-menu.collapsed {
@@ -136,6 +136,29 @@ const leave = (el, done) => {
   pointer-events: none;
   position: absolute; 
 }
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .app-menu {
+    width: 200px;
+    position: absolute; 
+    top: 0;
+    left: 0px; 
+    height: 100vh; 
+    background: #fff; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out; 
+  }
+
+  .app-menu.collapsed {
+    left: 0;
+  }
+
+  .app-menu.closing {
+    left: 0px;
+  }
+}
+
 
 .menu-text,
 .badge,
