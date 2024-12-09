@@ -47,3 +47,10 @@
 
 // App Pages Plugins
 @import "plugins/fullcalendar";
+
+/* assets/scss/app.scss */
+@layer utilities {
+  .bg-light {
+    background-color: #f2f2f7;  /* Define your custom light background color */
+  }
+}
